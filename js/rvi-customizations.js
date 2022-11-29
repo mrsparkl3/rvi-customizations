@@ -8,16 +8,19 @@ var RVI_customizations = {
         ],
  },
   init: function() {
-      console.log("GDP Hero"), this.assignClasses()
+      console.log("RVI Customizations"), this.assignClasses()
   },
 
   assignClasses: function(){
    jQuery('a.elementor-post-info__terms-list-item').each(function(el, ind){
-    let label = $(this).text().toLowerCase();
+    let label = jQuery(this).text().toLowerCase();
     
     let found = this.config.regions.find(label);
+
+    console.log(label);
+    console.log(found);
     if(found !== undefined){
-        $(this).addClass('taxonomy-' + label);
+        jQuery(this).addClass('taxonomy-' + label);
     }
     });
   },
@@ -29,8 +32,8 @@ jQuery(document).ready(function() {
 });
 
 //on FacetWP loaded
-(function($) {
-  $(document).on('facetwp-loaded', function() {
+(function(jQuery) {
+  jQuery(document).on('facetwp-loaded', function() {
       if (FWP.loaded) {
         //this.init();
         RVI_customizations.init();
