@@ -12,7 +12,7 @@ class RVIPlugin
     {
       wp_enqueue_style('rvi_customizations_css', plugin_dir_url(__FILE__) . 'css/rvi-customizations.css');
       // Javascript
-      wp_enqueue_script('rvi_customizations_js', plugin_dir_url(__FILE__) . 'js/rvi-customizations.js');
+      wp_enqueue_script('rvi_customizations_js', plugin_dir_url(__FILE__) . 'js/rvi-customizations.js', $in_footer = true);
     }
 
 
