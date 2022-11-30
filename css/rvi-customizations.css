@@ -1,23 +1,35 @@
-/*
-#page {
-    display: flex;
-    flex-direction: column;
-	min-height: 100vh;
-}
-.admin-bar #page{
-	min-height: calc(100vh - 32px);
-}
-#page .site-content{
-    flex-grow: 1;
-}
-*/
-
-/*if there is no taxonomy class specified*/
-#main-article #taxonomy-strip a{
-	color: blue;
-}
 .widget_elementor-library { list-style: none; }
 
+a.elementor-post-info__terms-list-item {
+	color: #004600;
+	text-transform: uppercase; 
+	font-weight: 700; 
+}
+.rvi-news-meta a.elementor-post-info__terms-list-item  {
+	text-transform: none;
+	font-weight: 400;
+}
+a.elementor-post-info__terms-list-item.taxonomy-rvi-badge {
+	text-transform: uppercase; 
+	font-weight: 600;
+	display: inline-block; 
+	padding: 3px 8px; 
+	color: white;
+}
+a.elementor-post-info__terms-list-item.taxonomy-rvi-badge.taxonomy-greatlakes { 
+	background: #00A3E2;
+}
+a.elementor-post-info__terms-list-item.taxonomy-rvi-badge.taxonomy-hornofafrica { 
+	background: var(--e-global-color-49f4a43);
+}
+a.elementor-post-info__terms-list-item.taxonomy-rvi-badge.taxonomy-sudanandsouthsudan { 
+	background: #A50000;
+}
+a.elementor-post-info__terms-list-item.taxonomy-rvi-badge.taxonomy-eastafrica { 
+	background: #FFD302;
+}
+
+/*
 #main-article #taxonomy-strip a.taxonomy-courses, #archive-post-list .taxonomy-courses {	
 	text-transform: uppercase; 
 	font-weight: 600;
@@ -42,7 +54,7 @@
 	background: #00A3E2;
 	color: white;
 }
-#main-article #taxonomy-strip a.taxonomy-southsudan, #archive-post-list .taxonomy-southsudan{
+#main-article #taxonomy-strip a.taxonomy-southsudan, #archive-post-list .taxonomy-sudanandsouthsudan{
 	text-transform: uppercase; 
 	font-weight: 600;
 	display: inline-block; 
@@ -61,6 +73,7 @@
 #main-article #taxonomy-strip a.taxonomy-research{
 	color: blue;
 }
+*/
 
 
 /*Style for FacetWP*/

@@ -7,24 +7,25 @@ var RVI_customizations = {
          'east africa'
         ],
  },
-  init: function() {
-      console.log("RVI Customizations"), this.assignClasses()
-  },
+	
+ init: function() {
+ 	console.log("RVI Customizations");
+	this.assignClasses();
+ },
 
-  assignClasses: function(){
-   jQuery('a.elementor-post-info__terms-list-item').each(function(el, ind){
-    let label = jQuery(this).text().toLowerCase();
-    
-    let found = this.config.regions.find(label);
-
-    console.log(label);
-    console.log(found);
-    if(found !== undefined){
-        jQuery(this).addClass('taxonomy-' + label);
-    }
+ assignClasses: function(){
+ 	jQuery('a.elementor-post-info__terms-list-item').each(function(el, ind){
+ 		let label = jQuery(this).text().toLowerCase();   
+    	let found = RVI_customizations.config.regions.indexOf(label);
+		
+		let regionalBadge = 'taxonomy-' + label.replaceAll(" ", "");
+		let classesToSet = 'taxonomy-rvi-badge ' + regionalBadge;
+		
+		if(found > -1){
+        	jQuery(this).addClass(classesToSet);
+    	}
     });
   },
-
 };
 
 jQuery(document).ready(function() {
